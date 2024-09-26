@@ -1,0 +1,41 @@
+.container{
+    padding: 20px 0;
+}
+
+.item{
+    width: 100%;
+    padding: 10px 10px;
+    border-radius: 5px;
+    -webkit-box-shadow: 1px 6px 18px 0px rgba(0,0,0,0.54);
+    -moz-box-shadow: 1px 6px 18px 0px rgba(0,0,0,0.54);
+    box-shadow: 1px 6px 18px 0px rgba(0,0,0,0.54);
+}
+
+.item h2{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.vendas{
+    border: 1px solid rgb(142, 142, 142);
+    border-bottom: 0px solid black;
+}
+
+.venda{
+    border-bottom: 1px solid rgb(142, 142, 142);
+}
+
+.nome-produto{
+    display: inline-block;
+    margin-right: -4px;
+    width: 70%;
+    padding: 5px;
+}
+
+.quantidade-produto{
+    display: inline-block;
+    margin-right: -4px;
+    width: 30%;
+    border-left: 1px solid rgb(142, 142, 142);
+    padding: 5px;
+}

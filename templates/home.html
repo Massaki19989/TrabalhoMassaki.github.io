@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/padrao.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='fontawesome/css/all.min.css') }}">
+</head>
+<body>
+    <div class="flex">
+        <aside>
+            <div class="button-aside">
+                <p>X</p>
+            </div><!--button-aside-->
+            <div class="abrir-menu">
+                <p><i class="fa-solid fa-bars"></i></p>
+            </div><!--abrir-menu-->
+            <ul>
+                <li><a href="./">Listas</a></li>
+                <li><a href="vender">Cadastrar Venda</a></li>
+            </ul>
+        </aside>
+        <main>
+            <header>
+                <h1>Mais Vendidos no Mês</h1>
+            </header>
+            <section class="container">
+                <div class="center">
+                    <div class="item">
+                        <h2>Janeiro</h2>
+                        <div class="vendas">
+
+                            <div class="venda">
+                                <div class="nome-produto" >
+                                    <p style="font-weight: bold;">Nome do produto</p>
+                                </div><!--nomeProduto-->
+                                <div class="quantidade-produto">
+                                    <p style="font-weight: bold;">Quantidade</p>
+                                </div><!--quantidade-produto-->
+                            </div><!--venda-->
+
+                            {% for venda in vendas %}
+                            <div class="venda">
+                                <div class="nome-produto">
+                                    <p>{{ venda[1] }}</p>
+                                </div><!--nomeProduto-->
+                                <div class="quantidade-produto">
+                                    <p>{{ venda[2] }}</p>
+                                </div><!--quantidade-produto-->
+                            </div><!--venda-->
+                            {% endfor %}
+                        </div><!--vendas-->
+                    </div><!--item-->
+                </div><!--center-->
+            </section><!--container-->
+        </main>
+    </div><!--flex-->
+    <script src="{{ url_for('static', filename='js/padrao.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/home.js') }}"></script>
+</body>
+</html>
