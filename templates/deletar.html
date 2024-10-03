@@ -1,0 +1,56 @@
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/deletar.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/padrao.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='fontawesome/css/all.min.css') }}">
+</head>
+<body>
+    <div class="flex">
+        <aside>
+            <div class="button-aside">
+                <p>X</p>
+            </div><!--button-aside-->
+            <div class="abrir-menu">
+                <p><i class="fa-solid fa-bars"></i></p>
+            </div><!--abrir-menu-->
+            <ul>
+                <li><h2>Vendas</h2></li>
+                <li><a href="./">Por Mês</a></li>
+                <li><a href="estacao">Por Estação</a></li>
+                <li><h2>Gerenciar</h2></li>
+                <li><a href="vender">Cadastrar Venda</a></li>
+                <li><a href="deletar">Deletar</a></li>
+            </ul>
+        </aside>
+        <main>
+            <header>
+                <h1>Deletar Item</h1>
+            </header>
+            
+            <section class="itens">
+                <div class="center">
+                    <div class="container">
+                        <div class="item" style="font-weight: bold;">
+                            <span>Nome do Produto</span>
+                            <span>Quantidade</span>
+                        </div><!--item-->
+                        {% for item in itens %}
+                            <div class="item">
+                                <span>{{ item[1] }}</span>
+                                <span>{{ item[2] }}</span>
+                                <span deletar="{{ item[0] }}" class="delete"><i class="fa-solid fa-trash"></i></span>
+                            </div><!--item-->
+                        {% endfor %}
+                    </div><!--container-->
+                </div><!--center-->
+            </section><!--itens-->
+
+        </main>
+    </div><!--flex-->
+    <script src="{{ url_for('static', filename='js/padrao.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/deletar.js') }}"></script>
+</body>
+</html>

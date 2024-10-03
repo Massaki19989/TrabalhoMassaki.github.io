@@ -1,0 +1,113 @@
+@font-face {
+    font-family: 'Inter';
+    src: url("{{ url_for('static', filename='fonts/Inter/Inter-VariableFont_opsz,wght.ttf') }}") format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+}
+
+.center{
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+body{
+    overflow-y: hidden;
+}
+
+.flex{
+    display: flex;
+}
+
+header{
+    background-color: rgb(36, 86, 110);
+    text-align: center;
+    padding: 20px 0;
+    color: white;
+    border-bottom: 1px solid black;
+}
+
+aside{
+    width: 400px;
+    max-width: 30vw;
+    padding: 40px 0;
+    vertical-align: top;
+    background-color: rgb(36, 86, 110);
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    transition: 1s;
+    text-align: right;
+}
+
+aside ul{
+    transition: 0.5s;
+}
+
+aside li{
+    text-align: left;
+}
+
+aside a{
+    display: inline-block;
+    width: 100%;
+    padding: 15px 20px;
+    color: white;
+    transition: 0.5s;
+    text-decoration: none;
+    border-bottom: 1px solid rgb(23, 78, 101);
+}
+
+aside li h2{
+    color: white;
+    padding: 10px 20px;
+    padding-top: 20px;
+}
+
+aside a:hover{
+    background-color: rgb(49, 118, 150);
+}
+
+.button-aside{
+    color: white;
+    font-weight: bold;
+    text-align: right;
+    cursor: pointer;
+    padding: 0 40px;
+    font-size: 23px;
+    display: inline-block;
+}
+
+.abrir-menu{
+    color: white;
+    font-weight: bold;
+    text-align: right;
+    cursor: pointer;
+    padding: 0 0px;
+    font-size: 23px;
+    display: inline-block;
+    display: none;
+}
+
+.button-aside:hover{
+    color: rgb(179, 179, 179);
+}
+
+.abrir-menu:hover{
+    color: rgb(179, 179, 179);
+}
+
+main{
+    width: 100%;
+    vertical-align: top;
+    height: 100vh;
+    overflow-y: scroll;
+}

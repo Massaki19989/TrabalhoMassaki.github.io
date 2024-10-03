@@ -1,0 +1,29 @@
+.itens{
+    padding: 30px 0;
+}
+
+.container{
+    border: 1px solid gray;
+    border-bottom: 0;
+}
+
+.delete{
+    cursor: pointer;
+    color: red;
+    font-size: 20px;
+}
+
+.delete:hover{
+    color: rgb(167, 29, 29);
+}
+
+.item{
+    padding: 10px 10px;
+    border-bottom: 1px solid gray;
+}
+
+.item span{
+    display: inline-block;
+    margin-right: -4px;
+    width: 33.33%;
+}

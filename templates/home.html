@@ -1,0 +1,378 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/padrao.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='fontawesome/css/all.min.css') }}">
+</head>
+<body>
+    <div class="flex">
+        <aside>
+            <div class="button-aside">
+                <p>X</p>
+            </div><!--button-aside-->
+            <div class="abrir-menu">
+                <p><i class="fa-solid fa-bars"></i></p>
+            </div><!--abrir-menu-->
+            <ul>
+                <li><h2>Vendas</h2></li>
+                <li><a href="./">Por Mês</a></li>
+                <li><a href="estacao">Por Estação</a></li>
+                <li><h2>Gerenciar</h2></li>
+                <li><a href="vender">Cadastrar Venda</a></li>
+                <li><a href="deletar">Deletar</a></li>
+            </ul>
+        </aside>
+        <main>
+            <header>
+                <h1>Mais Vendidos Por Mês</h1>
+            </header>
+            <section class="container">
+                <div class="center">
+
+                    <div class="item">
+                        <h2>Janeiro</h2>
+                        <div class="vendas">
+
+                            <div class="venda">
+                                <div class="nome-produto" >
+                                    <p style="font-weight: bold;">Nome do produto</p>
+                                </div><!--nomeProduto-->
+                                <div class="quantidade-produto">
+                                    <p style="font-weight: bold;">Quantidade</p>
+                                </div><!--quantidade-produto-->
+                            </div><!--venda-->
+
+                            {% for venda in vendas %}
+                                {% if venda[4] == 1 %}
+                                    <div class="venda">
+                                        <div class="nome-produto">
+                                            <p>{{ venda[1] }}</p>
+                                        </div><!--nomeProduto-->
+                                        <div class="quantidade-produto">
+                                            <p>{{ venda[2] }}</p>
+                                        </div><!--quantidade-produto-->
+                                    </div><!--venda-->
+                                {% endif %}
+                            {% endfor %}
+                        </div><!--vendas-->
+                    </div><!--item-->
+
+                    <div class="item">
+                        <h2>Fevereiro</h2>
+                        <div class="vendas">
+
+                            <div class="venda">
+                                <div class="nome-produto" >
+                                    <p style="font-weight: bold;">Nome do produto</p>
+                                </div><!--nomeProduto-->
+                                <div class="quantidade-produto">
+                                    <p style="font-weight: bold;">Quantidade</p>
+                                </div><!--quantidade-produto-->
+                            </div><!--venda-->
+
+                            {% for venda in vendas %}
+                                {% if venda[4] == 2 %}
+                                    <div class="venda">
+                                        <div class="nome-produto">
+                                            <p>{{ venda[1] }}</p>
+                                        </div><!--nomeProduto-->
+                                        <div class="quantidade-produto">
+                                            <p>{{ venda[2] }}</p>
+                                        </div><!--quantidade-produto-->
+                                    </div><!--venda-->
+                                {% endif %}
+                            {% endfor %}
+                        </div><!--vendas-->
+                    </div><!--item-->
+
+                    <div class="item">
+                        <h2>Março</h2>
+                        <div class="vendas">
+
+                            <div class="venda">
+                                <div class="nome-produto" >
+                                    <p style="font-weight: bold;">Nome do produto</p>
+                                </div><!--nomeProduto-->
+                                <div class="quantidade-produto">
+                                    <p style="font-weight: bold;">Quantidade</p>
+                                </div><!--quantidade-produto-->
+                            </div><!--venda-->
+
+                            {% for venda in vendas %}
+                                {% if venda[4] == 3 %}
+                                    <div class="venda">
+                                        <div class="nome-produto">
+                                            <p>{{ venda[1] }}</p>
+                                        </div><!--nomeProduto-->
+                                        <div class="quantidade-produto">
+                                            <p>{{ venda[2] }}</p>
+                                        </div><!--quantidade-produto-->
+                                    </div><!--venda-->
+                                {% endif %}
+                            {% endfor %}
+                        </div><!--vendas-->
+                    </div><!--item-->
+
+                    <div class="item">
+                        <h2>Abril</h2>
+                        <div class="vendas">
+
+                            <div class="venda">
+                                <div class="nome-produto" >
+                                    <p style="font-weight: bold;">Nome do produto</p>
+                                </div><!--nomeProduto-->
+                                <div class="quantidade-produto">
+                                    <p style="font-weight: bold;">Quantidade</p>
+                                </div><!--quantidade-produto-->
+                            </div><!--venda-->
+
+                            {% for venda in vendas %}
+                                {% if venda[4] == 4 %}
+                                    <div class="venda">
+                                        <div class="nome-produto">
+                                            <p>{{ venda[1] }}</p>
+                                        </div><!--nomeProduto-->
+                                        <div class="quantidade-produto">
+                                            <p>{{ venda[2] }}</p>
+                                        </div><!--quantidade-produto-->
+                                    </div><!--venda-->
+                                {% endif %}
+                            {% endfor %}
+                        </div><!--vendas-->
+                    </div><!--item-->
+
+                    <div class="item">
+                        <h2>Maio</h2>
+                        <div class="vendas">
+
+                            <div class="venda">
+                                <div class="nome-produto" >
+                                    <p style="font-weight: bold;">Nome do produto</p>
+                                </div><!--nomeProduto-->
+                                <div class="quantidade-produto">
+                                    <p style="font-weight: bold;">Quantidade</p>
+                                </div><!--quantidade-produto-->
+                            </div><!--venda-->
+
+                            {% for venda in vendas %}
+                                {% if venda[4] == 5 %}
+                                    <div class="venda">
+                                        <div class="nome-produto">
+                                            <p>{{ venda[1] }}</p>
+                                        </div><!--nomeProduto-->
+                                        <div class="quantidade-produto">
+                                            <p>{{ venda[2] }}</p>
+                                        </div><!--quantidade-produto-->
+                                    </div><!--venda-->
+                                {% endif %}
+                            {% endfor %}
+                        </div><!--vendas-->
+                    </div><!--item-->
+
+                    <div class="item">
+                        <h2>Junho</h2>
+                        <div class="vendas">
+
+                            <div class="venda">
+                                <div class="nome-produto" >
+                                    <p style="font-weight: bold;">Nome do produto</p>
+                                </div><!--nomeProduto-->
+                                <div class="quantidade-produto">
+                                    <p style="font-weight: bold;">Quantidade</p>
+                                </div><!--quantidade-produto-->
+                            </div><!--venda-->
+
+                            {% for venda in vendas %}
+                                {% if venda[4] == 6 %}
+                                    <div class="venda">
+                                        <div class="nome-produto">
+                                            <p>{{ venda[1] }}</p>
+                                        </div><!--nomeProduto-->
+                                        <div class="quantidade-produto">
+                                            <p>{{ venda[2] }}</p>
+                                        </div><!--quantidade-produto-->
+                                    </div><!--venda-->
+                                {% endif %}
+                            {% endfor %}
+                        </div><!--vendas-->
+                    </div><!--item-->
+
+                    <div class="item">
+                        <h2>Julho</h2>
+                        <div class="vendas">
+
+                            <div class="venda">
+                                <div class="nome-produto" >
+                                    <p style="font-weight: bold;">Nome do produto</p>
+                                </div><!--nomeProduto-->
+                                <div class="quantidade-produto">
+                                    <p style="font-weight: bold;">Quantidade</p>
+                                </div><!--quantidade-produto-->
+                            </div><!--venda-->
+
+                            {% for venda in vendas %}
+                                {% if venda[4] == 7 %}
+                                    <div class="venda">
+                                        <div class="nome-produto">
+                                            <p>{{ venda[1] }}</p>
+                                        </div><!--nomeProduto-->
+                                        <div class="quantidade-produto">
+                                            <p>{{ venda[2] }}</p>
+                                        </div><!--quantidade-produto-->
+                                    </div><!--venda-->
+                                {% endif %}
+                            {% endfor %}
+                        </div><!--vendas-->
+                    </div><!--item-->
+
+                    <div class="item">
+                        <h2>Agosto</h2>
+                        <div class="vendas">
+
+                            <div class="venda">
+                                <div class="nome-produto" >
+                                    <p style="font-weight: bold;">Nome do produto</p>
+                                </div><!--nomeProduto-->
+                                <div class="quantidade-produto">
+                                    <p style="font-weight: bold;">Quantidade</p>
+                                </div><!--quantidade-produto-->
+                            </div><!--venda-->
+
+                            {% for venda in vendas %}
+                                {% if venda[4] == 8 %}
+                                    <div class="venda">
+                                        <div class="nome-produto">
+                                            <p>{{ venda[1] }}</p>
+                                        </div><!--nomeProduto-->
+                                        <div class="quantidade-produto">
+                                            <p>{{ venda[2] }}</p>
+                                        </div><!--quantidade-produto-->
+                                    </div><!--venda-->
+                                {% endif %}
+                            {% endfor %}
+                        </div><!--vendas-->
+                    </div><!--item-->
+
+                    <div class="item">
+                        <h2>Setembro</h2>
+                        <div class="vendas">
+
+                            <div class="venda">
+                                <div class="nome-produto" >
+                                    <p style="font-weight: bold;">Nome do produto</p>
+                                </div><!--nomeProduto-->
+                                <div class="quantidade-produto">
+                                    <p style="font-weight: bold;">Quantidade</p>
+                                </div><!--quantidade-produto-->
+                            </div><!--venda-->
+
+                            {% for venda in vendas %}
+                                {% if venda[4] == 9 %}
+                                    <div class="venda">
+                                        <div class="nome-produto">
+                                            <p>{{ venda[1] }}</p>
+                                        </div><!--nomeProduto-->
+                                        <div class="quantidade-produto">
+                                            <p>{{ venda[2] }}</p>
+                                        </div><!--quantidade-produto-->
+                                    </div><!--venda-->
+                                {% endif %}
+                            {% endfor %}
+                        </div><!--vendas-->
+                    </div><!--item-->
+
+                    <div class="item">
+                        <h2>Outubro</h2>
+                        <div class="vendas">
+
+                            <div class="venda">
+                                <div class="nome-produto" >
+                                    <p style="font-weight: bold;">Nome do produto</p>
+                                </div><!--nomeProduto-->
+                                <div class="quantidade-produto">
+                                    <p style="font-weight: bold;">Quantidade</p>
+                                </div><!--quantidade-produto-->
+                            </div><!--venda-->
+
+                            {% for venda in vendas %}
+                                {% if venda[4] == 10 %}
+                                    <div class="venda">
+                                        <div class="nome-produto">
+                                            <p>{{ venda[1] }}</p>
+                                        </div><!--nomeProduto-->
+                                        <div class="quantidade-produto">
+                                            <p>{{ venda[2] }}</p>
+                                        </div><!--quantidade-produto-->
+                                    </div><!--venda-->
+                                {% endif %}
+                            {% endfor %}
+                        </div><!--vendas-->
+                    </div><!--item-->
+
+                    <div class="item">
+                        <h2>Novembro</h2>
+                        <div class="vendas">
+
+                            <div class="venda">
+                                <div class="nome-produto" >
+                                    <p style="font-weight: bold;">Nome do produto</p>
+                                </div><!--nomeProduto-->
+                                <div class="quantidade-produto">
+                                    <p style="font-weight: bold;">Quantidade</p>
+                                </div><!--quantidade-produto-->
+                            </div><!--venda-->
+
+                            {% for venda in vendas %}
+                                {% if venda[4] == 11 %}
+                                    <div class="venda">
+                                        <div class="nome-produto">
+                                            <p>{{ venda[1] }}</p>
+                                        </div><!--nomeProduto-->
+                                        <div class="quantidade-produto">
+                                            <p>{{ venda[2] }}</p>
+                                        </div><!--quantidade-produto-->
+                                    </div><!--venda-->
+                                {% endif %}
+                            {% endfor %}
+                        </div><!--vendas-->
+                    </div><!--item-->
+
+                    <div class="item">
+                        <h2>Dezembro</h2>
+                        <div class="vendas">
+
+                            <div class="venda">
+                                <div class="nome-produto" >
+                                    <p style="font-weight: bold;">Nome do produto</p>
+                                </div><!--nomeProduto-->
+                                <div class="quantidade-produto">
+                                    <p style="font-weight: bold;">Quantidade</p>
+                                </div><!--quantidade-produto-->
+                            </div><!--venda-->
+
+                            {% for venda in vendas %}
+                                {% if venda[4] == 12 %}
+                                    <div class="venda">
+                                        <div class="nome-produto">
+                                            <p>{{ venda[1] }}</p>
+                                        </div><!--nomeProduto-->
+                                        <div class="quantidade-produto">
+                                            <p>{{ venda[2] }}</p>
+                                        </div><!--quantidade-produto-->
+                                    </div><!--venda-->
+                                {% endif %}
+                            {% endfor %}
+                        </div><!--vendas-->
+                    </div><!--item-->
+
+                </div><!--center-->
+            </section><!--container-->
+        </main>
+    </div><!--flex-->
+    <script src="{{ url_for('static', filename='js/padrao.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/home.js') }}"></script>
+</body>
+</html>

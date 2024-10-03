@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/vender.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/padrao.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='fontawesome/css/all.min.css') }}">
+</head>
+<body>
+    <div class="flex">
+        <aside>
+            <div class="button-aside">
+                <p>X</p>
+            </div><!--button-aside-->
+            <div class="abrir-menu">
+                <p><i class="fa-solid fa-bars"></i></p>
+            </div><!--abrir-menu-->
+            <ul>
+                <li><h2>Vendas</h2></li>
+                <li><a href="./">Por Mês</a></li>
+                <li><a href="estacao">Por Estação</a></li>
+                <li><h2>Gerenciar</h2></li>
+                <li><a href="vender">Cadastrar Venda</a></li>
+                <li><a href="deletar">Deletar</a></li>
+            </ul>
+        </aside>
+        <main>
+            <header>
+                <h1>Cadastrar Vendas</h1>
+            </header>
+            
+            <section class="formulario">
+                <form action="/enviar" method="post">
+                    <div class="produtos">
+                        <div class="produto">
+                            <input type="number" name="quantidade[]" placeholder="Quantidade">
+                            <input type="text" name="nome[]" placeholder="Nome do Produto">
+                        </div><!--produto-->
+                    </div><!--produtos-->
+
+                    <span id="adicionar">Adicionar Linha +</span>
+
+                    <input type="submit">
+                </form><!--form-->    
+            </section><!--formulario-->
+
+        </main>
+    </div><!--flex-->
+    <script src="{{ url_for('static', filename='js/padrao.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/vendas.js') }}"></script>
+</body>
+</html>
