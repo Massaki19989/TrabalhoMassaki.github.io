@@ -10,6 +10,40 @@ def inicial():
     vendas = venda_db.obter_vendas_por_mes()
     return render_template('home.html', vendas=vendas)
 
+@app.route('/<int:mes>')
+def mes(mes):
+
+    nomeMes = 'Este mês não existe'
+
+    if mes == 1:
+        nomeMes = 'Janeiro'
+    elif mes == 2:
+        nomeMes = 'Fevereiro'
+    elif mes == 3:
+        nomeMes = 'Março'
+    elif mes == 4:
+        nomeMes = 'Abril'
+    elif mes == 5:
+        nomeMes = 'Maio'
+    elif mes == 6:
+        nomeMes = 'Junho'
+    elif mes == 7:
+        nomeMes = 'Julho'
+    elif mes == 8:
+        nomeMes = 'Agosto'
+    elif mes == 9:
+        nomeMes = 'Setembro'
+    elif mes == 10:
+        nomeMes = 'Outubro'
+    elif mes == 11:
+        nomeMes = 'Novembro'
+    elif mes == 12:
+        nomeMes = 'Dezembro'
+
+    vendaMes = venda_db.obter_vendas_do_mes(mes)
+    return render_template('meses.html', vendas = vendaMes, nomeMes = nomeMes)
+
+
 @app.route('/vender')
 def vender():
     return render_template('vender.html')

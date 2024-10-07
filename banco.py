@@ -48,12 +48,12 @@ class GerenciadorVendas():
         banco.commit()
         banco.close()
 
-    def obter_vendas_janeiro(self):
+    def obter_vendas_do_mes(self, mes):
         banco = sqlite3.connect('database/vendas.db')
         cursor = banco.cursor()
         cursor.execute("""
-            SELECT id, nome, SUM(quantidade) as total_quantidade, dia, mes, ano, hora FROM vendas WHERE mes = 1 GROUP BY nome, mes ORDER BY total_quantidade DESC
-        """)
+            SELECT id, nome, SUM(quantidade) as total_quantidade, dia, mes, ano, hora FROM vendas WHERE mes = ? GROUP BY nome, mes ORDER BY total_quantidade DESC
+        """, (mes,))
         vendas = cursor.fetchall()
 
         banco.close()
