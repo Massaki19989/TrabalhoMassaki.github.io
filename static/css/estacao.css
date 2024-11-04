@@ -1,0 +1,38 @@
+.estacao{
+    padding: 20px 0;
+}
+
+.itens{
+    -webkit-box-shadow: 1px 6px 18px 0px rgba(0,0,0,0.54);
+    -moz-box-shadow: 1px 6px 18px 0px rgba(0,0,0,0.54);
+    box-shadow: 1px 6px 18px 0px rgba(0,0,0,0.54);
+    margin-top: 20px;
+    padding: 10px 10px;
+    padding-bottom: 20px;
+}
+
+.itens h2{
+    padding: 10px 0;
+    text-align: center;
+}
+
+.item{
+    border: 1px solid gray;
+    border-bottom: 0;
+}
+
+.item span{
+    display: inline-block;
+    margin-right: -4px;
+    width: 70%;
+    padding: 7px 10px;
+}
+
+.item .quantidade{
+    width: 30% !important;
+    border-left: 1px solid gray;
+}
+
+.line{
+    border-top: 1px solid gray;
+}

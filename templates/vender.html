@@ -17,13 +17,38 @@
                 <p><i class="fa-solid fa-bars"></i></p>
             </div><!--abrir-menu-->
             <ul>
-                <li><a href="./">Listas</a></li>
+                <li><h2>Vendas</h2></li>
+                <li abrir="meses" class="abrir" status="0"><h3>Mês <i class="fa-solid fa-caret-down"></i></h3></li>
+                <div class="grupo" id="meses">
+                    <li><a href="1">Janeiro</a></li>
+                            <li><a href="2">Fevereiro</a></li>
+                            <li><a href="3">Março</a></li>
+                            <li><a href="4">Abril</a></li>
+                            <li><a href="5">Maio</a></li>
+                            <li><a href="6">Junho</a></li>
+                            <li><a href="7">Julho</a></li>
+                            <li><a href="8">Agosto</a></li>
+                            <li><a href="9">Setembro</a></li>
+                            <li><a href="10">Outubro</a></li>
+                            <li><a href="11">Novembro</a></li>
+                            <li><a href="12">Dezembro</a></li>
+                </div><!--grupo-->
+                <li abrir="estacoes" class="abrir" status="0"><h3>Estação do Ano <i class="fa-solid fa-caret-down"></i></h3></li>
+                <div class="grupo" id="estacoes">
+                    <li><a href="estacao">Estações</a></li>
+                    <li><a href="estacao/primavera">Primavera</a></li>
+                    <li><a href="estacao/verao">Verão</a></li>
+                    <li><a href="estacao/outono">Outono</a></li>
+                    <li><a href="estacao/inverno">Inverno</a></li>
+                </div><!--grupo-->
+                <li><h2>Gerenciar</h2></li>
                 <li><a href="vender">Cadastrar Venda</a></li>
+                <li><a href="deletar">Deletar</a></li>
             </ul>
         </aside>
         <main>
             <header>
-                <h1>Mais Vendidos no Mês</h1>
+                <h1>Cadastrar Vendas</h1>
             </header>
             
             <section class="formulario">
@@ -36,6 +61,14 @@
                     </div><!--produtos-->
 
                     <span id="adicionar">Adicionar Linha +</span>
+
+                    <div class="data">
+                        <input type="number" name="dia" placeholder="Dia" value="{{ dia }}">
+                        <span>/</span>
+                        <input type="number" name="mes" placeholder="Mes" value="{{ mes }}">
+                        <span>/</span>
+                        <input type="number" name="ano" placeholder="Ano" value="{{ ano }}">
+                    </div><!--data-->
 
                     <input type="submit">
                 </form><!--form-->    

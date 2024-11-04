@@ -1,0 +1,109 @@
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deletar Itens</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/deletar.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/padrao.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='fontawesome/css/all.min.css') }}">
+</head>
+<body>
+    <div class="flex">
+        <aside>
+            <div class="button-aside">
+                <p>X</p>
+            </div><!--button-aside-->
+            <div class="abrir-menu">
+                <p><i class="fa-solid fa-bars"></i></p>
+            </div><!--abrir-menu-->
+            <ul>
+                <li><h2>Vendas</h2></li>
+                <li abrir="meses" class="abrir" status="0"><h3>Mês <i class="fa-solid fa-caret-down"></i></h3></li>
+                <div class="grupo" id="meses">
+                    <li><a href="1">Janeiro</a></li>
+                            <li><a href="2">Fevereiro</a></li>
+                            <li><a href="3">Março</a></li>
+                            <li><a href="4">Abril</a></li>
+                            <li><a href="5">Maio</a></li>
+                            <li><a href="6">Junho</a></li>
+                            <li><a href="7">Julho</a></li>
+                            <li><a href="8">Agosto</a></li>
+                            <li><a href="9">Setembro</a></li>
+                            <li><a href="10">Outubro</a></li>
+                            <li><a href="11">Novembro</a></li>
+                            <li><a href="12">Dezembro</a></li>
+                </div><!--grupo-->
+                <li abrir="estacoes" class="abrir" status="0"><h3>Estação do Ano <i class="fa-solid fa-caret-down"></i></h3></li>
+                <div class="grupo" id="estacoes">
+                    <li><a href="estacao">Estações</a></li>
+                    <li><a href="estacao/primavera">Primavera</a></li>
+                    <li><a href="estacao/verao">Verão</a></li>
+                    <li><a href="estacao/outono">Outono</a></li>
+                    <li><a href="estacao/inverno">Inverno</a></li>
+                </div><!--grupo-->
+                <li><h2>Gerenciar</h2></li>
+                <li><a href="vender">Cadastrar Venda</a></li>
+                <li><a href="deletar">Deletar</a></li>
+            </ul>
+        </aside>
+        <main>
+            <header>
+                <h1>Deletar Item</h1>
+            </header>
+            
+            <section class="itens">
+                <div class="center">
+                    <div class="container">
+                        <div class="item" style="font-weight: bold;">
+                            <span>Nome do Produto</span>
+                            <span>Quantidade</span>
+                            <span></span>
+                            <span>Data</span>
+                        </div><!--item-->
+                        {% for item in itens %}
+                            <div class="item">
+                                <span>{{ item[1] }}</span>
+                                <span>{{ item[2] }}</span>
+                                <span deletar="{{ item[0] }}" class="delete"><i class="fa-solid fa-trash"></i></span>
+                                <div class="data">
+                                    <span>{{ item[3] }}/</span>
+                                    <span>{{ item[4] }}/</span>
+                                    <span>{{ item[5] }}</span>
+                                </div><!--data-->
+                            </div><!--item-->
+                        {% endfor %}
+
+                        
+                    </div><!--container-->
+                    <div class="paginas">
+                        <ul>
+                            <li><a href="?pg=1" class="primeiraPagina"><span><<</span></a></li>
+
+                            {% if pgAnterior > 0%}
+                                <li><a href="?pg={{ pgAnterior }}"><span>{{ pgAnterior }}</span></a></li>
+                            {% endif %}
+
+                            <li><a href="?pg={{ pgAtual }}" style="background-color: rgb(102, 102, 102);"><span>{{ pgAtual }}</span></a></li>
+
+                            {% if pgAtual < proximaPg %}
+                                <li><a href="?pg={{ proximaPg }}"><span>{{ proximaPg }}</span></a></li>
+                            {% endif %}
+
+                            {% if ultimaPg != 0 %}
+                                <li><a href="?pg={{ ultimaPg }}" class="primeiraPagina"><span>>></span></a></li>
+                            {% else %}
+                                <li><a href="?pg=1" class="primeiraPagina"><span>>></span></a></li>
+                            {% endif %}
+
+                            
+                        </ul>
+                    </div><!--pginas-->
+                </div><!--center-->
+            </section><!--itens-->
+
+        </main>
+    </div><!--flex-->
+    <script src="{{ url_for('static', filename='js/padrao.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/deletar.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+1 - Delete o arquivo pyvenv.cfg
+2 - Entre na pasta do projeto:
+    cd c:/pasta_do_projeto
+3 - Execute o comando python3 -m venv ./
+4 - Execute o comando scripts/activate
+5 - Execute o comando pip uninstall flask
+6 - Execute o comando pip install flask

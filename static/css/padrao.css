@@ -35,7 +35,7 @@ header{
     border-bottom: 1px solid black;
 }
 
-aside{
+aside {
     width: 400px;
     max-width: 30vw;
     padding: 40px 0;
@@ -43,10 +43,17 @@ aside{
     background-color: rgb(36, 86, 110);
     height: 100vh;
     position: relative;
-    overflow: hidden;
+    overflow-y: scroll;
     transition: 1s;
     text-align: right;
 }
+
+aside {
+    scrollbar-width: thin; /* Largura da barra de rolagem */
+    scrollbar-color: rgb(36, 86, 110) rgb(7, 65, 92); /* Cor do polegar e cor do fundo */
+}
+
+
 
 aside ul{
     transition: 0.5s;
@@ -54,6 +61,29 @@ aside ul{
 
 aside li{
     text-align: left;
+}
+
+aside li h3{
+    color: white;
+    cursor: pointer;
+    padding: 10px 25px;
+}
+
+aside li h3 i{
+    transition: transform 0.3s ease;
+}
+
+
+.grupo{
+    padding: 0 10px;
+    overflow: hidden;
+    height: 0;
+    transition: 1s;
+}
+
+.grupo li a{
+    font-size: 14px;
+    font-weight: lighter;
 }
 
 aside a{
@@ -64,6 +94,12 @@ aside a{
     transition: 0.5s;
     text-decoration: none;
     border-bottom: 1px solid rgb(23, 78, 101);
+}
+
+aside li h2{
+    color: white;
+    padding: 10px 20px;
+    padding-top: 20px;
 }
 
 aside a:hover{
@@ -104,4 +140,64 @@ main{
     vertical-align: top;
     height: 100vh;
     overflow-y: scroll;
+    scrollbar-width: thin; /* Largura da barra de rolagem */
+    scrollbar-color: rgb(7, 65, 92) rgb(36, 86, 110); /* Cor do polegar e cor do fundo */
+}
+
+.paginas{
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.paginas li{
+    list-style-type: none;
+    display: inline-block;
+    
+}
+
+.paginas li a{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background-color: black;
+    position: relative;
+    color: white;
+    transition: 0.5s;
+    text-decoration: none;
+    vertical-align: top;
+}
+
+.paginas li a:hover{
+    background-color: rgb(72, 72, 72);
+}
+
+.paginas li a span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.primeiraPagina{
+    width: auto !important;
+    padding: 0 10px;
+}
+
+.primeiraPagina span{
+    position: relative !important;
+    left: 0 !important;
+    top: 25% !important;
+}
+
+.ano{
+    padding: 20px 0;
+}
+
+.ano select{
+    width: 100%;
+    padding: 5px 10px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
 }
